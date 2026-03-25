@@ -33,11 +33,11 @@ jobs:
 
       # ── Step 3: Install uv on the runner ───────────────────────
       - name: Install uv
-        run: pip install uv
+        run: pip install "uv>=0.4"
 
       # ── Step 4: Install project dependencies ───────────────────
       - name: Install dependencies
-        run: uv sync --no-dev –no-install-project
+        run: uv sync --no-dev
 
       # ── Step 5: Download MovieLens dataset ─────────────────────
       - name: Download MovieLens 100k dataset
